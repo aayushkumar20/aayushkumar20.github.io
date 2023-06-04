@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Certificate Showcase</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .certificates {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .certificate {
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .certificate:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        }
+
+        .certificate img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .dropdown {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .dropdown select {
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown select:hover {
+            background-color: #f5f5f5;
+        }
+
+        .dropdown select:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Certificate Showcase</h1>
+    <div class="container">
+        <div class="dropdown">
+            <label for="certificate-select">Select Certificate:</label>
+            <select id="certificate-select">
+                <option value="">Select a certificate...</option>
+                <option value="certificate1">Inmovido</option>
+                <option value="certificate2">Flipkart GRiD 4.0</option>
+                <option value="certificate3">NDG Linux Essential</option>
+                <option value="certificate4">GDSC</option>
+                <option value="certificate5">Introduction to Cybersecurity</option>
+                <option value="certificate6">Junior Cybersecurity analyst</option>
+                <option value="certificate7">Face recognition using ML</option>
+                <!-- Add more options for additional certificates -->
+            </select>
+        </div>
+        <div class="certificates">
+            <div class="certificate" id="certificate1">
+                <img src="certificate image/Aayush_Dec_2020_training_6445_page-0001.jpg" alt="Certificate 1">
+                <h3>Inmovido</h3>
+            </div>
+            <div class="certificate" id="certificate2">
+                <img src="certificate image/flipkart.jpg" alt="Certificate 2">
+                <h3>Flipkart GRiD 4.0</h3>
+            </div>
+            <div class="certificate" id="certificate3">
+                <img src="certificate image/ndg.jpg" alt="Certificate 3">
+                <h3>NDG Linux Unhatched</h3>
+            </div>
+            <div class="certificate" id="certificate4">
+                <img src="certificate image/GSDC.png" alt="Certificate 4">
+                <h3>GSDC Imacathon</h3>
+            </div>
+            <div class="certificate" id="certificate5">
+                <img src="certificate image/Introduction_to_Cybersecurity_Ba.jpg" alt="Certificate 5">
+                <h3>Intro to Cybersecurity</h3>
+            </div>
+            <div class="certificate" id="certificate6">
+                <img src="certificate image/Junior_Cybersecurity_Analyst_pag.jpg" alt="Certificate 6">
+                <h3>Jr. cybersec. analyst</h3>
+            </div>
+            <div class="certificate" id="certificate7">
+                <img src="certificate image/ML.png" alt="Certificate 6">
+                <h3>Face recognition using ML</h3>
+            </div>
+            <!-- Add more certificate divs for additional certificates -->
+        </div>
+    </div>
+
+    <script>
+        // Get the select element
+        var select = document.getElementById("certificate-select");
+
+        // Get all the certificate elements
+        var certificates = document.querySelectorAll(".certificate");
+
+        // Add an event listener to the select element
+        select.addEventListener("change", function() {
+            // Loop through all certificate elements
+            for (var i = 0; i < certificates.length; i++) {
+                // Hide all certificate elements
+                certificates[i].style.display = "none";
+            }
+
+            // Get the selected certificate element
+            var selectedCertificate = document.getElementById(select.value);
+
+            // Show the selected certificate element
+            selectedCertificate.style.display = "block";
+        });
+    </script>
+</body>
+</html>
