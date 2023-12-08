@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="./contact_files/style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #2c3e50; /* Dark mode background color */
+            color: #fff; /* Dark mode text color */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #2c3e50;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        form {
+            display: grid;
+            gap: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #2c3e50;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 100px;
+            border: 1px solid #000; /* Black border for the textarea */
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="https://formspree.io/f/mknldbyl" method="POST">
+            <h2>Get in Touch With Me</h2>
+            <input type="text" id="name" placeholder="Your Name" name="Your name" required>
+            <input type="email" id="email" placeholder="Your Email" name="Your email" required>
+            <input type="tel" id="phone" placeholder="Your Mobile Number" name="Your mobile number" required>
+            <textarea id="message" rows="4" placeholder="Give Your Valuable Feedback" name="Contact me" required></textarea>
+            <button type="submit">Send!</button>
+        </form>
+    </div>
+</body>
+
+</html>
